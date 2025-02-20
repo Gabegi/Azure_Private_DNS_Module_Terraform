@@ -8,10 +8,5 @@ variable "private_dns" {
   type = map(object({
     name = string
   }))
-  default = {
-    example = {
-      name = "example.private.zone"
-    }
-  }
 }
 
