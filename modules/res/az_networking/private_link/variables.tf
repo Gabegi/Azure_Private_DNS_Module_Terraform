@@ -12,12 +12,14 @@ variable "dns_link" {
   default = {
     example_link = {
       name = "example-dns-link"
-      private_dns = {
-        name = "example.private.zone"
-      }
-      vnet = {
-        id = "/subscriptions/your-subscription-id/resourceGroups/your-rg/providers/Microsoft.Network/virtualNetworks/your-vnet"
+      private_dns_name = "example.private.zone"
+      vnet_id = "/subscriptions/your-subscription-id/resourceGroups/your-rg/providers/Microsoft.Network/virtualNetworks/your-vnet"
       }
     }
   }
+
+
+variable "rg_name" {
+  type        = string
+  description = "Optional name override for the resource group"
 }
