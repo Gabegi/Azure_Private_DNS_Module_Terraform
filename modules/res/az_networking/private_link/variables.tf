@@ -2,12 +2,8 @@ variable "dns_link" {
   description = "A map of DNS links to associate private DNS zones with virtual networks"
   type = map(object({
     name       = string
-    private_dns = object({
-      name = string
-    })
-    vnet = object({
-      id = string
-    })
+    private_dns_name = string
+    vnet_id = string
   }))
   default = {
     example_link = {
