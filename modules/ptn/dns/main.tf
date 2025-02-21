@@ -8,4 +8,6 @@ module "private_link" {
   source = "../../res/az_networking/private_link"
   rg_name = var.rg_name
   dns_link = var.dns_link
+
+  depends_on = [ module.private_dns ]
 }
