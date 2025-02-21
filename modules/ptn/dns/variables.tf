@@ -13,3 +13,7 @@ variable "dns_link" {
     vnet_id = string
   }))
 }
+
+variable "rg_name" {
+  type = string
+}

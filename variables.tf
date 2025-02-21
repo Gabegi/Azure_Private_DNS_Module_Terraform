@@ -9,3 +9,11 @@ variable "private_dns" {
     name = string
   }))
 }
+
+variable "dns_link" {
+  type = map(object({
+    name              = string
+    private_dns_name  = string
+    vnet_name         = string
+  }))
+}
