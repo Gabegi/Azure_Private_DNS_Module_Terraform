@@ -11,9 +11,22 @@ variable "private_dns" {
 }
 
 variable "dns_link" {
+  description = "A map of DNS links to associate private DNS zones with virtual networks"
   type = map(object({
-    name              = string
-    private_dns_name  = string
-    vnet_name         = string
+    name       = string
+    private_dns_name = string
+    vnet_id = string
   }))
+}
+
+variable "vnets" {
+  description = "Map of vnets to create"
+  type = map(object({
+    name            = string
+    address_space = string
+  }))
+}
+variable "rg_location" {
+  description = "Resource Group location"
+  type        = string
 }
