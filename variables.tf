@@ -15,7 +15,7 @@ variable "dns_link" {
   type = map(object({
     name       = string
     private_dns_name = string
-    vnet_id = string
+     vnet_name = string
   }))
 }
 

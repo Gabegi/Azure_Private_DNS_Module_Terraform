@@ -7,6 +7,7 @@ module "vnet" {
   source = "./modules/res/az_networking/vnet"
   vnets = var.vnets
   rg_name     = module.general.rg_name
+  rg_location = var.rg_location
 }
 
 module "private_dns_setup" {
