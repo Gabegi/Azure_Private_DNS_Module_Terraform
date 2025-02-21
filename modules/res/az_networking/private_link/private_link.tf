@@ -1,3 +1,10 @@
+data "azurerm_virtual_network" "vnet" {
+  for_each            = var.dns_link
+  name                = each.value.vnet_name
+  resource_group_name = var.rg_name
+}
+
+
 resource "azurerm_private_dns_zone_virtual_network_link" "dns_link" {
   for_each = var.dns_link
   
