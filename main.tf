@@ -15,4 +15,6 @@ module "private_dns_setup" {
   rg_name     = module.rg.rg_name
   private_dns = var.private_dns
   dns_link    = var.dns_link
+
+  depends_on = [ module.vnet ]
 }

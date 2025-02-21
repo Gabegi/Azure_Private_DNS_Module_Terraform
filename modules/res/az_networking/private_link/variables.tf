@@ -5,13 +5,6 @@ variable "dns_link" {
     private_dns_name = string
     vnet_name = string
   }))
-  default = {
-    example_link = {
-      name = "example-dns-link"
-      private_dns_name = "example.private.zone"
-      vnet_name = "your-vnet"
-      }
-    }
   }
 
 
