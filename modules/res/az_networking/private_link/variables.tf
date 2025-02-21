@@ -3,13 +3,13 @@ variable "dns_link" {
   type = map(object({
     name       = string
     private_dns_name = string
-    vnet_id = string
+    vnet_name = string
   }))
   default = {
     example_link = {
       name = "example-dns-link"
       private_dns_name = "example.private.zone"
-      vnet_id = "/subscriptions/your-subscription-id/resourceGroups/your-rg/providers/Microsoft.Network/virtualNetworks/your-vnet"
+      vnet_name = "your-vnet"
       }
     }
   }
