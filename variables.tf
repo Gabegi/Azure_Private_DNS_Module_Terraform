@@ -23,7 +23,7 @@ variable "vnets" {
   description = "Map of vnets to create"
   type = map(object({
     name            = string
-    address_space = string
+    address_space = list(string)
   }))
 }
 variable "rg_location" {
