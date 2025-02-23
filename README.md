@@ -1,5 +1,5 @@
 # Azure_Private_DNS_Module_Terraform
-
+Terraform Module for Private DNS
 
 Navigate to the repo and run:
 - terraform init
